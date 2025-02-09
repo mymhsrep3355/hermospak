@@ -18,12 +18,12 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { FaPaw } from "react-icons/fa";
+import Cart from "./Cart";
 
 const Navbar = ({ menuLinks }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   // const menuLinks = ["Private label", "Brands", "About us", "News", "Vacancies"];
-
   return (
     <Box
       as={motion.nav}
@@ -62,11 +62,25 @@ const Navbar = ({ menuLinks }) => {
             <Link
               key={link}
               href={`#${link.toLowerCase().replace(" ", "-")}`}
-              fontSize="md" // Slightly larger font size for links
+              fontSize="md"
               fontWeight="medium"
               color="gray.600"
-              _hover={{ textDecoration: "none", color: "black" }}
-              transition="color 0.3s ease"
+              position="relative"
+              _after={{
+                content: '""',
+                position: "absolute",
+                bottom: "-2px",
+                left: "0",
+                width: "0",
+                height: "2px",
+                bg: "#C02232", // Animated line color
+                transition: "width 0.3s ease-in-out",
+              }}
+              _hover={{
+                _after: {
+                  width: "100%", // Expand the line on hover
+                },
+              }}
             >
               {link}
             </Link>
@@ -85,11 +99,12 @@ const Navbar = ({ menuLinks }) => {
           >
             Contact
           </Button>
+          <Cart/>
         </HStack>
 
         <IconButton
           size="lg"
-          icon={<FaPaw />} // The FaPaw icon
+          icon={<FaPaw style={{marginLeft: "10px"}} />} // The FaPaw icon
           aria-label="Open Menu"
           display={{ md: "none" }}
           onClick={onOpen}

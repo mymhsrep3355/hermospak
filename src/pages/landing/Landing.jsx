@@ -4,6 +4,10 @@ import Navbar from "../../components/landing/Navbar";
 import OurBrands from "../../components/landing/OurBrands";
 import Footer from "../../components/landing/Footer";
 import Category from "../../components/landing/CategoryCard";
+import BannerRecommendation from "../../components/landing/BannerRecomendation";
+import CatCategoryCards from "../../components/landing/CatCategoryCards";
+import ProductLine from "../../components/landing/ProductLine";
+import AIRecommendationSection from "../../components/landing/AIRecommendation";
 
 const menuLinks = ["Private label", "Brands", "About us", "News", "Vacancies"];
 const Landing = () => {
@@ -20,6 +24,10 @@ const Landing = () => {
         <Navbar menuLinks={menuLinks}/>
         <OurBrands></OurBrands>
         <Category/>
+        <ProductLine/>
+        <CatCategoryCards/>
+        <BannerRecommendation/>
+        <AIRecommendationSection/>
         <Footer/>
       </Box>
     </>
