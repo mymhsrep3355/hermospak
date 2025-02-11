@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 // Motion components
 const MotionBox = motion(Box);
@@ -71,6 +72,8 @@ const CategoryCard = ({ image, title, subtitle }) => {
 
 const Category = () => {
   return (
+    <>
+    <SectionHeader heading={"Explore Products"} subheading={"... pets are loved as family"}/>
     <Flex
       direction={{ base: "column", md: "row" }}
       gap={0}
@@ -92,6 +95,7 @@ const Category = () => {
         subtitle="OUR FOODS"
       />
     </Flex>
+    </>
   );
 };
 
