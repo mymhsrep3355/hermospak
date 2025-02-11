@@ -19,6 +19,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { FaPaw } from "react-icons/fa";
 import Cart from "./Cart";
+import { logoPrimaryColor } from "../../constants";
 
 const Navbar = ({ menuLinks }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -89,7 +90,7 @@ const Navbar = ({ menuLinks }) => {
             as={motion.a}
             href="#contact"
             size="md"
-            bg="#C02232"
+            bg={logoPrimaryColor}
             color="white"
             borderRadius="full"
             px={8}
@@ -99,23 +100,23 @@ const Navbar = ({ menuLinks }) => {
           >
             Contact
           </Button>
-          <Cart/>
+          {/* <Cart/> */}
         </HStack>
 
         <IconButton
           size="lg"
-          icon={<FaPaw style={{marginLeft: "10px"}} />} // The FaPaw icon
+          icon={<FaPaw style={{marginLeft: "10px"}} />}
           aria-label="Open Menu"
           display={{ md: "none" }}
           onClick={onOpen}
-          bg="#C02232" // Red background
+          bg={logoPrimaryColor}// Red background
           color="white" // White icon
-          _hover={{ bg: "#a81b28" }} // Darker red on hover
-          _active={{ bg: "#80111c" }} // Even darker red on click
+          _hover={{ bg: "#a81b28" }} 
+          _active={{ bg: "#80111c" }}
          
-          fontSize="1.5rem" // Set icon font size explicitly
-          justifyContent="center" // Center icon horizontally
-          alignItems="center" // Center icon vertically
+          fontSize="1.5rem" 
+          justifyContent="center" 
+          alignItems="center" 
         />
       </Flex>
 
@@ -147,7 +148,7 @@ const Navbar = ({ menuLinks }) => {
                 as="a"
                 href="#contact"
                 size="lg"
-                bg="#C02232"
+                bg={logoPrimaryColor}
                 color="white"
                 borderRadius="full"
                 px={8}

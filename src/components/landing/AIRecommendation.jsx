@@ -154,7 +154,7 @@ const AIRecommendationSection = () => {
             bg="red.600"
             color="white"
             borderRadius="full"
-            px={8}
+            px={8}  
             py={6}
             fontWeight="bold"
             fontSize={{ base: "sm", md: "md" }}

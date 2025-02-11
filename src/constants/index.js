@@ -1,0 +1,1 @@
+export const logoPrimaryColor = "#F59F3C";

@@ -10,10 +10,11 @@ const CategoryCard = ({ image, title, subtitle }) => {
     <MotionBox
       position="relative"
       overflow="hidden"
-      borderRadius="md"
+      // borderRadius="md"
       boxShadow="md"
+      w={"100%"}
       cursor="pointer"
-      whileHover={{ scale: 1.05 }} // Slight zoom effect on hover
+      // whileHover={{ scale: 1.05 }} // Slight zoom effect on hover
       initial={{ opacity: 0, y: 50 }} // Animation on load
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -72,8 +73,8 @@ const Category = () => {
   return (
     <Flex
       direction={{ base: "column", md: "row" }}
-      gap={6}
-      px={{ base: 4, md: 8 }}
+      gap={0}
+      // px={{ base: 4, md: 8 }}
       py={10}
       justify="center"
     >

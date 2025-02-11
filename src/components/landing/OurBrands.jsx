@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Flex, Heading, Text, Button, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { logoPrimaryColor } from "../../constants";
 
 // Motion components
 const MotionBox = motion(Box);
@@ -51,9 +52,9 @@ const OurBrands = () => {
           transition={{ duration: 1, delay: 0.5 }} // Add delay for a smooth effect
         >
           <Heading
-            as="h2"
+            as="h1"
             size="xl"
-            color="#C02232"
+            color={logoPrimaryColor}
             mb={4}
             fontWeight="bold"
             lineHeight="short"
@@ -68,7 +69,7 @@ const OurBrands = () => {
             maxW="600px"
             mx={{ base: "auto", lg: "0" }}
           >
-            With our own successful brands CaroCroc, CASA-FERA, SANIMED, and
+            With our own successful brands PawPaw, Benefit, Klicker, and
             Impress Your Dog, we are represented in every segment of the market.
             We have market knowledge of both the pet stores and the veterinary
             market.
@@ -76,7 +77,7 @@ const OurBrands = () => {
           {/* Button with Delayed Animation */}
           <MotionButton
             size="lg"
-            bg="#C02232"
+            bg={logoPrimaryColor}
             color="white"
             borderRadius="full"
             px={8}

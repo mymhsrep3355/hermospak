@@ -8,6 +8,7 @@ import BannerRecommendation from "../../components/landing/BannerRecomendation";
 import CatCategoryCards from "../../components/landing/CatCategoryCards";
 import ProductLine from "../../components/landing/ProductLine";
 import AIRecommendationSection from "../../components/landing/AIRecommendation";
+import Carousel from "../../components/landing/Carousel";
 
 const menuLinks = ["Private label", "Brands", "About us", "News", "Vacancies"];
 const Landing = () => {
@@ -22,6 +23,7 @@ const Landing = () => {
         flexDirection="column"
       >
         <Navbar menuLinks={menuLinks}/>
+        <Carousel/>
         <OurBrands></OurBrands>
         <Category/>
         <ProductLine/>
