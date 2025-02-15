@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
+import { logoPrimaryColor } from "../../constants";
 
 // Motion components
 const MotionBox = motion(Box);
@@ -37,6 +38,7 @@ const CategoryCard = ({ image, title, subtitle }) => {
         w="100%"
         h="30%" // Initial height of the overlay
         bg="rgba(0, 0, 0, 0.6)"
+        // bg={logoPrimaryColor}
         color="white"
         textAlign="center"
         display="flex"

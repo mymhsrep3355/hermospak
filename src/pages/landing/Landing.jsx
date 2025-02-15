@@ -9,6 +9,7 @@ import CatCategoryCards from "../../components/landing/CatCategoryCards";
 import ProductLine from "../../components/landing/ProductLine";
 import AIRecommendationSection from "../../components/landing/AIRecommendation";
 import Carousel from "../../components/landing/Carousel";
+import FindDietAi from "../../components/landing/FindDietAi";
 
 const menuLinks = ["Private label", "Brands", "About us", "News", "Vacancies"];
 const Landing = () => {
@@ -24,10 +25,11 @@ const Landing = () => {
       >
         <Navbar menuLinks={menuLinks}/>
         <Carousel/>
-        <OurBrands></OurBrands>
-        <Category/>
         <ProductLine/>
+        <OurBrands></OurBrands>
         <CatCategoryCards/>
+        <Category/>
+        <FindDietAi/>
         <BannerRecommendation/>
         <AIRecommendationSection/>
         <Footer/>

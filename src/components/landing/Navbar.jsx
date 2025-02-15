@@ -44,10 +44,10 @@ const Navbar = ({ menuLinks }) => {
         h="20"
         alignItems="center"
         justifyContent="space-between"
-        maxW="1200px"
+        // maxW="1200px"
+        maxW={"100%"}
         mx="auto"
       >
-        {/* Logo */}
         <HStack>
           <Image
             as={motion.img}

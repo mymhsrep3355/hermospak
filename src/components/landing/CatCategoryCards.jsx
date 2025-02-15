@@ -25,7 +25,7 @@ const CatCategoryCards = () => {
   ];
 
   return (
-    <Box w="100%" mt={12} mb={12} p={{ base: 4, md: 8 }}>
+    <Box w="100%" mt={4} mb={6} p={{ base: 4, md: 8 }}>
       <SectionHeader
         heading={"Explore Products by Cat Category"}
         subheading={"... cats are our family"}

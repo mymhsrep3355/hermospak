@@ -4,14 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { logoPrimaryColor } from "../../constants";
 
 const images = [
-  "/banner1.jpeg",
-  "/banner2.jpeg",
-  "/banner3.jpeg",
+  "/benifit banner.jpg",
+  "/klicker banner.jpg"
 ];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,11 +18,9 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
-
 
   const carouselHeight = useBreakpointValue({
     base: "50vh",
@@ -42,7 +38,6 @@ const Carousel = () => {
       alignItems="center"
       justifyContent="center"
     >
-      {/* Image Slide Container */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -58,11 +53,11 @@ const Carousel = () => {
             objectFit="cover"
             width="100%"
             height="100%"
+            // borderRadius="lg"
           />
         </motion.div>
       </AnimatePresence>
 
-      {/* Navigation Dots */}
       <HStack
         position="absolute"
         bottom={{ base: "10px", md: "20px", lg: "30px" }}
@@ -73,24 +68,12 @@ const Carousel = () => {
         {images.map((_, index) => (
           <Circle
             key={index}
-            size={index === currentIndex ? { base: "25px", md: "30px" } : { base: "10px", md: "12px" }}
+            size={index === currentIndex ? { base: "15px", md: "20px" } : { base: "10px", md: "12px" }}
             bg={index === currentIndex ? logoPrimaryColor : "white"}
             transition="all 0.3s ease"
             cursor="pointer"
             onClick={() => goToSlide(index)}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {index === currentIndex && (
-              <Box
-                width={{ base: "15px", md: "20px" }}
-                height={{ base: "4px", md: "6px" }}
-                bg="black"
-                borderRadius="full"
-              />
-            )}
-          </Circle>
+          />
         ))}
       </HStack>
     </Box>

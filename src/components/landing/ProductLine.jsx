@@ -17,8 +17,9 @@ const ProductLine = () => {
     <Box
       w="100%"
       minH="100vh"
-      bgImage="url('https://images.unsplash.com/photo-1698920680045-0f786dd1380c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" // Background image
+      // bgImage="url('https://images.unsplash.com/photo-1698920680045-0f786dd1380c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" // Background image
       bgSize="cover"
+      bgImage={`url('/BrandLine-bg.png')`}
       bgPosition="center"
       bgRepeat="no-repeat"
       display="flex"
@@ -26,14 +27,13 @@ const ProductLine = () => {
       justifyContent="center"
       p={8}
     >
-     
       <Box
         w="100%"
         maxW="1200px"
-        bg="rgba(255, 255, 255, 0.8)" // Glassy effect
+        bg="rgba(255, 255, 255, 0.1)" // Glassy effect
         backdropFilter="blur(10px)"
-        borderRadius="lg"
-        boxShadow="xl"
+        // borderRadius="full"
+        // boxShadow="xl"
         display="flex"
         flexDirection={{ base: "column", lg: "row" }} // Responsive layout
         p={8}
@@ -48,19 +48,28 @@ const ProductLine = () => {
           justify="center"
         >
           {/* Brand Title */}
-          <Text fontSize="lg" color="gray.500" fontWeight="medium">
+          <Text
+            fontSize={{ base: "3xl", md: "6xl" }}
+            fontWeight="extrabold"
+            color="#003A94"
+            lineHeight="1.2"
+            textTransform="capitalize"
+            as="h1"
+            size={{ base: "xl", md: "2xl" }}
+          >
             Hermos Pakistan
           </Text>
 
           {/* Main Heading */}
           <Heading
             as="h1"
-            fontFamily="'Dancing Script', cursive" // Add this font to your project
-            fontSize={{ base: "2xl", md: "4xl" }}
-            fontWeight="bold"
+            // fontFamily="'Meow Script', cursive"
+            fontSize={{ base: "3xl", md: "54xl" }}
+            fontWeight="extrabold"
+            textTransform={"capitalize"}
             color="#003366"
           >
-            Hermos Product Line
+            Product Line
           </Heading>
 
           {/* Feature List */}
@@ -71,14 +80,14 @@ const ProductLine = () => {
           >
             <HStack spacing={3}>
               <Icon as={CheckCircleIcon} color="blue.500" boxSize={6} />
-              <Text fontSize="md" color="gray.600">
+              <Text fontSize="lg" color="gray.600" fontWeight={500}>
                 The Hermos Culinary range offers a varied and gastronomic
                 selection for real little gourmets and meat lovers.
               </Text>
             </HStack>
             <HStack spacing={3}>
               <Icon as={CheckCircleIcon} color="blue.500" boxSize={6} />
-              <Text fontSize="md" color="gray.600">
+              <Text fontSize="lg" color="gray.600" fontWeight={500}>
                 The exclusive preparations with high-grade animal proteins help
                 to maintain a healthy life full of vitality right into old age.
               </Text>

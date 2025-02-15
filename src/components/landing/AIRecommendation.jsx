@@ -21,31 +21,32 @@ const AIRecommendationSection = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      bg="#F4F4F4"
+      bg="#E5E5E5"
       px={{ base: 4, md: 8 }}
     >
       <Box
         w="100%"
         maxW={{ base: "95%", sm: "90%", md: "80%", lg: "100%" }}
-        bg="white"
+        bg="#F4F4F4"
         borderRadius="lg"
         boxShadow="xl"
         p={{ base: 6, md: 8, lg: 10 }}
+        // border={"1px solid"}
         display="flex"
         flexDirection={{ base: "column", md: "row" }}
-        alignItems="center"
+        // alignItems="center"
         justifyContent="space-between"
         gap={6}
       >
         {/* Left Section: Image */}
         <Box flex="1" display="flex" justifyContent="center" alignItems="center">
           <Image
-            src="/ai-recommendation-img.png" // Replace with your image path
+            src="/ai-recommendation-img.png"
             alt="Pet Recommendation"
-            borderRadius="lg"
+            // borderRadius="lg"
             objectFit="contain"
             maxW="100%"
-            h={{ base: "200px", md: "250px", lg: "300px" }} // Responsive height
+            // h={{ base: "200px", md: "250px", lg: "300px" }}
           />
         </Box>
 
@@ -76,10 +77,9 @@ const AIRecommendationSection = () => {
           {/* Main Heading */}
           <Heading
             as="h2"
-            fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
+            fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
             fontWeight="bold"
             color="gray.800"
-            lineHeight="short"
             mb={4}
           >
             Find the right product
@@ -148,13 +148,12 @@ const AIRecommendationSection = () => {
             </VStack>
           </HStack>
 
-          {/* Call-to-Action Button */}
           <Button
             size="lg"
             bg="red.600"
             color="white"
             borderRadius="full"
-            px={8}  
+            px={8}
             py={6}
             fontWeight="bold"
             fontSize={{ base: "sm", md: "md" }}
